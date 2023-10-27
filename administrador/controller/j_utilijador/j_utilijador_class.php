@@ -49,13 +49,13 @@ class j_utilijador
 
     public function verifika_login_utilijador($id_rejistu, $password)
     {
-        $query = $this->conn->prepare("SELECT * FROM public.utilijador WHERE username = '$id_rejistu' AND password = '$password'");
+        $query = $this->conn->prepare("SELECT * FROM public.view_utilijador WHERE id_rejistu = '$id_rejistu' AND password = '$password'");
         $query->execute();
         $menbru = $query->fetchAll(PDO::FETCH_ASSOC);
         // var_dump($menbru);
         if (count($menbru) > 0) {
             foreach ($menbru as $mbr) {
-                $_SESSION['id_rejistu'] = $mbr['username'];
+                $_SESSION['id_rejistu'] = $mbr['id_rejistu'];
                 $_SESSION['password'] = $mbr['password'];
                 $_SESSION['naran_kompletu'] = $mbr['naran_kompletu'];
                 $_SESSION['email'] = $mbr['email'];

@@ -31,7 +31,7 @@ if (isset($_POST['insert_utilijador'])) {
 
 if (isset($_POST['login_utilijador'])) {
     $id_rejistu = $_POST['id_rejistu'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
     #$id_menbru = $_POST['id_menbru']; // Depois muuda fali ba iha ne
     $login = $class_j_utilijador->verifika_login_utilijador($id_rejistu, $password);
 }

@@ -35,6 +35,24 @@ session_destroy();
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="js/jquery.js"></script>
 
+    <style>
+        .divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+    </style>
+
 
 </head>
 
@@ -42,36 +60,87 @@ session_destroy();
 
     <!-- Page Wrapper -->
     <div id="wrapper">
+
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
             <div id="content">
                 <div class="card">
-                    <?php  ?>
-                    <div class="card-header bg-gradient-success">
-                        <h5 class="card-title text-white" id="exampleModalLabel">Login</h5>
-                    </div>
-                    <form action="controller/j_utilijador/j_utilijador_handler.php" method="POST" class="col p-4 position-static" enctype="multipart/form-data">
-                        <div class="card-body">
-                            <div class="row justify-content-md-center mt-4">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="id_rejistu">ID Membru :</label>
-                                        <input type="text" class="form-control" id="id_rejistu" name="id_rejistu" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email"> Password :</label>
-                                        <input type="password" class="form-control" id="password" name="password" required>
-                                    </div>
+                    
+                    <section class="vh-100">
+                        <div class="container-fluid h-custom">
+                            <div class="row d-flex justify-content-center align-items-center h-100">
+                            <div class="col-md-9 col-lg-6 col-xl-5">
+                                <img src="img/logo_fdsl.jpeg" class="img-fluid" alt="Sample image">
+                            </div>
+                            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                                <form action="controller/j_utilijador/j_utilijador_handler.php" method="POST" class="col p-4 position-static" enctype="multipart/form-data">
+
+                                <div class="divider d-flex align-items-center my-4">
+                                    <h2 class="text-center fw-bold mx-3 mb-0">SISTEMA INFORMASAUN</h2>
                                 </div>
+
+                                <!-- Email input -->
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="id_rejistu" name="id_rejistu" class="form-control form-control-lg" placeholder="Hatama ita nia ID-Membro nian" />
+                                    <label class="form-label" for="id_rejistu">ID-Membro</label>
+                                </div>
+
+                                <!-- Password input -->
+                                <div class="form-outline mb-3">
+                                    <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Hatama ita nia password" />
+                                    <label class="form-label" for="password">Password</label>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <!-- Checkbox -->
+                                    <div class="form-check mb-0">
+                                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                                    <label class="form-check-label" for="form2Example3">
+                                        Remember me
+                                    </label>
+                                    </div>
+                                    <a href="#!" class="text-body">Haluha password?</a>
+                                </div>
+
+                                <div class="text-center text-lg-start mt-4 pt-2">
+                                    <button type="submit" name="login_utilijador" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;" >
+                                        Login
+                                    </button>
+ 
+                                </div>
+
+                                </form>
+                            </div>
                             </div>
                         </div>
-                        <div class="card-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Kansela</button>
-                            <button type="submit" class="btn btn-success" name="login_utilijador">Tama ba Sistema</button>
+                        <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5" style="background-color: #006600;">
+                            <!-- Copyright -->
+                            <div class="text-white mb-3 mb-md-0">
+                            Copyright © <?= date('Y')?>. All rights reserved.
+                            </div>
+                            <!-- Copyright -->
+
+                            <!-- Right -->
+                            <div>
+                            <a href="#!" class="text-white me-4">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#!" class="text-white me-4">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#!" class="text-white me-4">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="#!" class="text-white">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            </div>
+                            <!-- Right -->
                         </div>
-                    </form>
+                        </section>
+                        
                 </div>
             </div>
         </div>

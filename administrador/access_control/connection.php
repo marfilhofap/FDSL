@@ -33,7 +33,8 @@ class connection
             $pdo = new PDO($dsn, $this->PSQLUSER, $this->PSQLPW, $options);
             return $pdo;
         } catch (PDOException $e) {
-            return "Falha em conecção : " . $e->getMessage();
+            echo $e->getMessage();
+            // return "Falha em conecção : " . $e->getMessage();
         }
     }
 
