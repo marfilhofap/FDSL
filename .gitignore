@@ -1,0 +1,3 @@
+# Ignore Config File
+config/parametros_db.php
+config/db_fdsl
