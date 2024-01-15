@@ -169,7 +169,7 @@ if ($id_kartaun != '') {
   // -----------------------------------------------------------------------------------------
 
 
-  $qrcode = 'http://localhost:8080/fdsl/website/index.php?c=verifika_kartaun&id=' . $verifikasaun;
+  $qrcode = '192.168.114.36/fdsl/website/index.php?c=verifika_kartaun&id=' . $verifikasaun;
 
   $pdf->write2DBarcode($qrcode, 'QRCODE,H', 17, 53, 20, 20, $style, 'N');
 

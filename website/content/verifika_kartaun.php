@@ -40,32 +40,32 @@ if ($id != '') {
             <tr>
               <td width="150" align="left"> Naran </td>
               <td width="20"> : </td>
-              <td width="300"> '.$loop['naran_kompletu'].' </td>
+              <td width="300"> ' . $loop['naran_kompletu'] . ' </td>
             </tr>
             <tr>
               <td width="150" align="left"> Sexu </td>
               <td width="20"> : </td>
-              <td width="300"> '.$loop['sexu'].' </td>
+              <td width="300"> ' . $loop['sexu'] . ' </td>
             </tr>
             <tr>
               <td width="150" align="left"> Data Moris </td>
               <td width="20"> : </td>
-              <td width="300"> '.$loop['data_de_nascimento'].' </td>
+              <td width="300"> ' . $loop['data_de_nascimento'] . ' </td>
             </tr>
             <tr>
               <td width="150" align="left"> Jerasaun </td>
               <td width="20"> : </td>
-              <td width="300"> '.$loop['tipu_jerasaun'].' </td>
+              <td width="300"> ' . $loop['tipu_jerasaun'] . ' </td>
             </tr>
             <tr>
               <td width="150" align="left"> Tlf </td>
               <td width="20"> : </td>
-              <td width="300"> '.$loop['nu_telemovel'].' </td>
+              <td width="300"> ' . $loop['nu_telemovel'] . ' </td>
             </tr>
             <tr>
               <td width="150" align="left"> Email </td>
               <td width="20"> : </td>
-              <td width="300"> '.$loop['email'].' </td>
+              <td width="300"> ' . $loop['email'] . ' </td>
             </tr>
           </tbody>
         </table>
