@@ -24,6 +24,12 @@ switch ($content) {
     case 'tipu_publikasaun':
         include __DIR__ . '/../content/j_publikasaun/tipu_publikasaun.php';
         break;
+    case 'partisipante_programa':
+        include __DIR__ . '/../content/j_programa/partisipante_programa.php';
+        break;
+    case 'partisipante_programa_detalho':
+        include __DIR__ . '/../content/j_programa/partisipante_programa_detalho.php';
+        break;
     case 'programa':
         include __DIR__ . '/../content/j_programa/programa.php';
         break;

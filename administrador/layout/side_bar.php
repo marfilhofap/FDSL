@@ -27,7 +27,7 @@
             <hr class="sidebar-divider">
 
             <!-- Nav Item - Jestaun Materia -->
-            <li class="nav-item <?= $_GET['c'] == 'materia' || $_GET['c'] == 'area' || $_GET['c'] == 'materia_klik' ? 'active' : '' ?>">
+            <li class="nav-item <?= isset($_GET['c']) && ($_GET['c'] == 'materia' || $_GET['c'] == 'area' || $_GET['c'] == 'materia_klik') ? 'active' : '' ?>">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#j_materia" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-book"></i>
                     <span>Jestaun Materia</span>
@@ -35,10 +35,10 @@
                 <div id="j_materia" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Jestaun Materia:</h6>
-                        <a class="collapse-item <?= $_GET['c'] == 'materia' || $_GET['c'] == 'materia_klik'  ? 'active' : '' ?>" href="?c=materia">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'materia' || $_GET['c'] == 'materia_klik')  ? 'active' : '' ?>" href="?c=materia">
                             Materia
                         </a>
-                        <a class="collapse-item <?= $_GET['c'] == 'area' ? 'active' : '' ?>" href="?c=area">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'area') ? 'active' : '' ?>" href="?c=area">
                             Area
                         </a>
                     </div>
@@ -46,7 +46,7 @@
             </li>
 
             <!-- Nav Item - Jestaun Publikasaun -->
-            <li class="nav-item <?= $_GET['c'] == 'publikasaun' || $_GET['c'] == 'tipu_publikasaun' ? 'active' : '' ?>">
+            <li class="nav-item <?= isset($_GET['c']) && ($_GET['c'] == 'publikasaun' || $_GET['c'] == 'tipu_publikasaun') ? 'active' : '' ?>">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#j_publikasaun" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-globe"></i>
                     <span>Jestaun Publikasaun</span>
@@ -54,10 +54,10 @@
                 <div id="j_publikasaun" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Jestaun Publikasaun:</h6>
-                        <a class="collapse-item <?= $_GET['c'] == 'publikasaun' ? 'active' : '' ?>" href="?c=publikasaun">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'publikasaun') ? 'active' : '' ?>" href="?c=publikasaun">
                             Publikasaun
                         </a>
-                        <a class="collapse-item <?= $_GET['c'] == 'tipu_publikasaun' ? 'active' : '' ?>" href="?c=tipu_publikasaun">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'tipu_publikasaun') ? 'active' : '' ?>" href="?c=tipu_publikasaun">
                             Tipu
                         </a>
                     </div>
@@ -65,7 +65,7 @@
             </li>
 
             <!-- Nav Item - Jestaun Programa -->
-            <li class="nav-item <?= $_GET['c'] == 'programa' || $_GET['c'] == 'tipu_programa' ? 'active' : '' ?>">
+            <li class="nav-item <?= isset($_GET['c']) && ($_GET['c'] == 'partisipante_programa' || $_GET['c'] == 'partisipante_programa_detalho' || $_GET['c'] == 'programa' || $_GET['c'] == 'tipu_programa') ? 'active' : '' ?>">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#j_programa" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-briefcase"></i>
                     <span>Jestaun Programa</span>
@@ -73,10 +73,13 @@
                 <div id="j_programa" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Jestaun Programa:</h6>
-                        <a class="collapse-item <?= $_GET['c'] == 'programa' ? 'active' : '' ?>" href="?c=programa">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'partisipante_programa' || $_GET['c'] == 'partisipante_programa_detalho') ? 'active' : '' ?>" href="?c=partisipante_programa">
+                            Partisipante
+                        </a>
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'programa') ? 'active' : '' ?>" href="?c=programa">
                             Programa
                         </a>
-                        <a class="collapse-item <?= $_GET['c'] == 'tipu_programa' ? 'active' : '' ?>" href="?c=tipu_programa">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'tipu_programa') ? 'active' : '' ?>" href="?c=tipu_programa">
                             Tipu
                         </a>
                     </div>
@@ -84,7 +87,7 @@
             </li>
 
             <!-- Nav Item - Jestaun Membru -->
-            <li class="nav-item <?= $_GET['c'] == 'membru' || $_GET['c'] == 'tipu_jerasaun' || $_GET['c'] == 'estrutura' || $_GET['c'] == 'tipu_estrutura' ? 'active' : '' ?>">
+            <li class="nav-item <?= isset($_GET['c']) && ($_GET['c'] == 'membru' || $_GET['c'] == 'tipu_jerasaun' || $_GET['c'] == 'estrutura' || $_GET['c'] == 'tipu_estrutura') ? 'active' : '' ?>">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#j_membru" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Jestaun Membru</span>
@@ -92,16 +95,16 @@
                 <div id="j_membru" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Jestaun Membru:</h6>
-                        <a class="collapse-item <?= $_GET['c'] == 'membru' ? 'active' : '' ?>" href="?c=membru">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'membru') ? 'active' : '' ?>" href="?c=membru">
                             Membro
                         </a>
-                        <a class="collapse-item <?= $_GET['c'] == 'estrutura' ? 'active' : '' ?>" href="?c=estrutura">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'estrutura') ? 'active' : '' ?>" href="?c=estrutura">
                             Estrutura
                         </a>
-                        <a class="collapse-item <?= $_GET['c'] == 'tipu_jerasaun' ? 'active' : '' ?>" href="?c=tipu_jerasaun">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'tipu_jerasaun') ? 'active' : '' ?>" href="?c=tipu_jerasaun">
                             Tipu Jerasaun
                         </a>
-                        <a class="collapse-item <?= $_GET['c'] == 'tipu_estrutura' ? 'active' : '' ?>" href="?c=tipu_estrutura">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'tipu_estrutura') ? 'active' : '' ?>" href="?c=tipu_estrutura">
                             Tipu Estrutura
                         </a>
                     </div>
@@ -109,7 +112,7 @@
             </li>
 
             <!-- Nav Item - Jestaun Assets -->
-            <li class="nav-item <?= $_GET['c'] == 'tipu_assets' || $_GET['c'] == 'dados_assets' ? 'active' : '' ?>">
+            <li class="nav-item <?= isset($_GET['c']) && ($_GET['c'] == 'tipu_assets' || $_GET['c'] == 'dados_assets') ? 'active' : '' ?>">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#j_assets" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Jestaun Assets</span>
@@ -117,10 +120,10 @@
                 <div id="j_assets" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Jestaun Utilijador:</h6>
-                        <a class="collapse-item <?= $_GET['c'] == 'tipu_assets' ? 'active' : '' ?>" href="?c=tipu_assets">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'tipu_assets') ? 'active' : '' ?>" href="?c=tipu_assets">
                             Tipo Assets
                         </a>
-                        <a class="collapse-item <?= $_GET['c'] == 'dados_assets' ? 'active' : '' ?>" href="?c=dados_assets">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'dados_assets') ? 'active' : '' ?>" href="?c=dados_assets">
                             Dados Assets
                         </a>
                     </div>
@@ -128,7 +131,7 @@
             </li>
 
             <!-- Nav Item - Jestaun Kartaun -->
-            <li class="nav-item <?= $_GET['c'] == 'tipu_kartaun' || $_GET['c'] == 'dados_kartaun' ? 'active' : '' ?>">
+            <li class="nav-item <?= isset($_GET['c']) && ($_GET['c'] == 'tipu_kartaun' || $_GET['c'] == 'dados_kartaun') ? 'active' : '' ?>">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#j_kartaun" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Jestaun Kartaun</span>
@@ -136,10 +139,10 @@
                 <div id="j_kartaun" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Jestaun Utilijador:</h6>
-                        <a class="collapse-item <?= $_GET['c'] == 'dados_kartaun' ? 'active' : '' ?>" href="?c=dados_kartaun">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'dados_kartaun') ? 'active' : '' ?>" href="?c=dados_kartaun">
                             Kartaun
                         </a>
-                        <a class="collapse-item <?= $_GET['c'] == 'tipu_kartaun' ? 'active' : '' ?>" href="?c=tipu_kartaun">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'tipu_kartaun') ? 'active' : '' ?>" href="?c=tipu_kartaun">
                             Tipo Kartaun
                         </a>
                     </div>
@@ -147,7 +150,7 @@
             </li>
 
             <!-- Nav Item - Jestaun Sertifikadu -->
-            <li class="nav-item <?= $_GET['c'] == 'sertifikadu' || $_GET['c'] == 'tipu_sertifikadu' ? 'active' : '' ?>">
+            <li class="nav-item <?= isset($_GET['c']) && ($_GET['c'] == 'sertifikadu' || $_GET['c'] == 'tipu_sertifikadu') ? 'active' : '' ?>">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#j_sertifikadu" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Jestaun Sertifikadu</span>
@@ -155,10 +158,10 @@
                 <div id="j_sertifikadu" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Jestaun Sertifikadu:</h6>
-                        <a class="collapse-item <?= $_GET['c'] == 'sertifikadu' ? 'active' : '' ?>" href="?c=sertifikadu">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'sertifikadu') ? 'active' : '' ?>" href="?c=sertifikadu">
                             Sertifikadu
                         </a>
-                        <a class="collapse-item <?= $_GET['c'] == 'tipu_sertifikadu' ? 'active' : '' ?>" href="?c=tipu_sertifikadu">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'tipu_sertifikadu') ? 'active' : '' ?>" href="?c=tipu_sertifikadu">
                             Tipu Sertifikadu
                         </a>
                     </div>
@@ -166,7 +169,7 @@
             </li>
 
             <!-- Nav Item - Jestaun Utilijador -->
-            <li class="nav-item <?= $_GET['c'] == 'utilijador' || $_GET['c'] == 'nivel_asesu' ? 'active' : '' ?>">
+            <li class="nav-item <?= isset($_GET['c']) && ($_GET['c'] == 'utilijador' || $_GET['c'] == 'nivel_asesu') ? 'active' : '' ?>">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#j_utilijador" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-key"></i>
                     <span>Jestaun Utilijador</span>
@@ -174,10 +177,10 @@
                 <div id="j_utilijador" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Jestaun Utilijador:</h6>
-                        <a class="collapse-item <?= $_GET['c'] == 'utilijador' ? 'active' : '' ?>" href="?c=utilijador">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'utilijador') ? 'active' : '' ?>" href="?c=utilijador">
                             Utilijador
                         </a>
-                        <a class="collapse-item <?= $_GET['c'] == 'nivel_asesu' ? 'active' : '' ?>" href="?c=nivel_asesu">
+                        <a class="collapse-item <?= isset($_GET['c']) && ($_GET['c'] == 'nivel_asesu') ? 'active' : '' ?>" href="?c=nivel_asesu">
                             Nivel Asesu
                         </a>
                     </div>

@@ -1,5 +1,6 @@
 <?php
-$programa = $get_table->get_table("programa p join tipu_programa t on t.id_tipu_programa=p.id_tipu_programa");
+$id = $_GET['id'];
+$programa = $get_table->get_table("view_programa_partisipante where id_programa='$id'");
 ?>
 
 <div class="container-fluid">
@@ -7,7 +8,7 @@ $programa = $get_table->get_table("programa p join tipu_programa t on t.id_tipu_
         <div class="col-xl-12 col-lg-7">
             <div class="card shadow mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Programa</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Partisipante Programa</h6>
                     <a href="#" class="btn btn-success btn-icon-split" data-toggle="modal" data-target="#jerasaun_fdsl">
                         <span class="text">Aumenta</span>
                         <span class="icon text-white-50">
@@ -22,11 +23,11 @@ $programa = $get_table->get_table("programa p join tipu_programa t on t.id_tipu_
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Titulu</th>
-                                    <th>Tipu</th>
+                                    <th>Naran</th>
+                                    <th>ID</th>
+                                    <th>Programa</th>
                                     <th>Data Hahu</th>
                                     <th>Data Remata</th>
-                                    <th>Programa</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -35,11 +36,11 @@ $programa = $get_table->get_table("programa p join tipu_programa t on t.id_tipu_
                                 foreach ($programa as $loop) {
                                     echo '<tr>
                                         <td>' . $no++ . '</td>     
-                                        <td>' . $loop['titulu'] . '</td>
-                                        <td>' . $loop['tipu_programa'] . '</td>     
+                                        <td>' . $loop['naran_kompletu'] . '</td>
+                                        <td>' . $loop['id_rejistu'] . '</td>     
+                                        <td>' . $loop['titulu'] . ' - (' . $loop['tipu_programa'] . ')</td>
                                         <td>' . $loop['data_hahu'] . '</td>
                                         <td>' . $loop['data_remata'] . '</td>
-                                        <td>' . $loop['programa'] . '</td>
                                     </tr>';
                                 }
                                 ?>
